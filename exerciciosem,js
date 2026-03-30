@@ -1,0 +1,121 @@
+// 1. Verificador de Maioridade
+let idade = Number(prompt("1) Digite sua idade:"));
+if (idade >= 18) {
+    alert("Maior de idade");
+} else {
+    alert("Menor de idade");
+}
+
+
+// 2. Par ou Ímpar
+let numero = Number(prompt("2) Digite um número:"));
+if (numero % 2 === 0) {
+    alert("Par");
+} else {
+    alert("Ímpar");
+}
+
+
+// 3. Calculadora Simples
+let n1 = Number(prompt("3) Primeiro número:"));
+let n2 = Number(prompt("Segundo número:"));
+let op = prompt("Operação (+, -, *, /):");
+
+if (op === "+") {
+    alert("Resultado: " + (n1 + n2));
+} else if (op === "-") {
+    alert("Resultado: " + (n1 - n2));
+} else if (op === "*") {
+    alert("Resultado: " + (n1 * n2));
+} else if (op === "/") {
+    alert("Resultado: " + (n1 / n2));
+} else {
+    alert("Operação inválida");
+}
+
+
+// 4. Tabuada
+let tab = Number(prompt("4) Digite um número para tabuada:"));
+for (let i = 1; i <= 10; i++) {
+    console.log(tab + " x " + i + " = " + (tab * i));
+}
+
+
+// 5. Média do Aluno
+let a = Number(prompt("5) Nota 1:"));
+let b = Number(prompt("Nota 2:"));
+let c = Number(prompt("Nota 3:"));
+
+let media = (a + b + c) / 3;
+
+if (media >= 7) {
+    alert("Aprovado");
+} else if (media >= 5) {
+    alert("Recuperação");
+} else {
+    alert("Reprovado");
+}
+
+
+// 6. Contagem até N
+let n = Number(prompt("6) Digite um número:"));
+for (let i = 1; i <= n; i++) {
+    console.log(i);
+}
+
+
+// 7. Soma até digitar 0
+let soma = 0;
+let num;
+
+do {
+    num = Number(prompt("7) Digite número (0 para parar):"));
+    soma += num;
+} while (num !== 0);
+
+alert("Soma total: " + soma);
+
+
+// 8. Contador de positivos
+let positivos = 0;
+
+for (let i = 1; i <= 5; i++) {
+    let valor = Number(prompt("8) Digite um número:"));
+    if (valor > 0) {
+        positivos++;
+    }
+}
+
+alert("Positivos: " + positivos);
+
+
+// 9. Sistema de Login
+let tentativas = 0;
+
+while (tentativas < 3) {
+    let user = prompt("9) Usuário:");
+    let pass = prompt("Senha:");
+
+    if (user === "admin" && pass === "1234") {
+        alert("Login correto");
+        break;
+    } else {
+        alert("Erro");
+        tentativas++;
+    }
+}
+
+if (tentativas === 3) {
+    alert("Bloqueado");
+}
+
+
+// 10. Fatorial
+let fat = Number(prompt("10) Digite um número:"));
+let res = 1;
+
+for (let i = 1; i <= fat; i++) {
+    res *= i;
+}
+
+alert("Fatorial: " + res);
