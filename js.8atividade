@@ -1,0 +1,11 @@
+let contador = 0;
+
+for (let i = 1; i <= 5; i++) {
+    let num = Number(prompt("Digite um número:"));
+    
+    if (num > 0) {
+        contador++;
+    }
+}
+
+alert("Quantidade de números positivos: " + contador);
